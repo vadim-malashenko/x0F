@@ -2,10 +2,10 @@ export default class x0F
 {
     constructor()
     {
-        addEventListener(`load`, this.load)
+        
     }
 
-    load(ev)
+    static load(ev)
     {
         console.log(this.constructor.name)
     }
