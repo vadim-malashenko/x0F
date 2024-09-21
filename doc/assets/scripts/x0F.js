@@ -13,13 +13,17 @@ export default class x0F
     {
         window[id].width = innerWidth
         window[id].height = innerHeight
-        return window[id]
     }
 
     getContext(canvas)
     {
         const context = canvas.getContext("2d")
         context.font = "16px Arial"
+        context.globalCompositeOperation = `destination-over`
+        
+        context.fillStyle = `blue`
+        context.fillRect(0, 0, canvas.width, canvas.height)
+
         return context
     }
 
