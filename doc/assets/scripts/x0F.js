@@ -37,6 +37,7 @@ export default class x0F
         this.context.beginPath()
         this.context.moveTo(x1, y1)
         this.context.lineTo(x2, y2)
+        this.context.fillStyle = `#444444`
         this.context.strokeStyle = color
         this.context.stroke()
         this.context.lineWidth = lineWidth
