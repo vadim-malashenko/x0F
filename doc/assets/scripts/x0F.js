@@ -44,11 +44,8 @@ export default class x0F
 
     clear()
     {
-        const fillStyle = this.context.fillStyle
-
         this.context.fillStyle = `#444444`
         this.context.fillRect(0, 0, innerWidth, innerHeight)
-        this.context.fillStyle = fillStyle
     }
 
     static load(ev)
