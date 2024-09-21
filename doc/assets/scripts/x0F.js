@@ -25,6 +25,8 @@ export default class x0F
 
     static load(ev)
     {
-        window.x0F = ev.target.x0F ?? new x0F()
+        window.x0F = new x0F()
+
+        console.log(window.x0F)
     }
 }
