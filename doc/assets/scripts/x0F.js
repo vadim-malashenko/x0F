@@ -7,6 +7,8 @@ export default class x0F
     {
         this.canvas = this.getCanvas(`x0f`)
         this.context = this.getContext(this.canvas)
+
+        this.clear()
     }
 
     getCanvas(id)
@@ -23,14 +25,13 @@ export default class x0F
 
         context.font = "16px Arial"
         context.globalCompositeOperation = `destination-over`
-        
         // context.fillStyle = `blue`
         // context.fillRect(0, 0, canvas.width, canvas.height)
 
         return context
     }
 
-    line(x1, y1, x2, y2, thickness = 1)
+    line(x1, y1, x2, y2, color = `blue`, thickness = 1)
     {
         const lineWidth = this.context.lineWidth
 
@@ -38,7 +39,7 @@ export default class x0F
         this.context.beginPath()
         this.context.moveTo(x1, y1)
         this.context.lineTo(x2, y2)
-        this.context.strokeStyle = `yellow`
+        this.context.strokeStyle = color
         this.context.stroke()
         this.context.lineWidth = lineWidth
     }
