@@ -24,8 +24,8 @@ export default class x0F
         context.font = "16px Arial"
         context.globalCompositeOperation = `destination-over`
         
-        context.fillStyle = `blue`
-        context.fillRect(0, 0, canvas.width, canvas.height)
+        // context.fillStyle = `blue`
+        // context.fillRect(0, 0, canvas.width, canvas.height)
 
         return context
     }
@@ -47,8 +47,8 @@ export default class x0F
     {
         const fillStyle = this.context.fillStyle
 
-        this.context.fillStyle = backgroundColor
-        this.context.fillRect(0,0,innerWidth,innerHeight)
+        this.context.fillStyle = `#444444`
+        this.context.fillRect(0, 0, innerWidth, innerHeight)
         this.context.fillStyle = fillStyle
     }
 
