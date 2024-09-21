@@ -23,6 +23,27 @@ export default class x0F
         return context
     }
 
+    line(x1, y1, x2, y2, thickness = 1)
+    {
+        const lineWidth = this.context.lineWidth
+
+        this.context.lineWidth = thickness ?? 1
+        this.context.beginPath()
+        this.context.moveTo(x1 + offsetX, y1 + offsetY)
+        this.context.lineTo(x2 + offsetX, y2 + offsetY)
+        this.context.stroke()
+        this.context.lineWidth = lineWidth
+    }
+
+    clear()
+    {
+        const fillStyle = this.context.fillStyle
+
+        this.context.fillStyle = backgroundColor
+        this.context.fillRect(0,0,innerWidth,innerHeight)
+        this.context.fillStyle = fillStyle
+    }
+
     static load(ev)
     {
         window.x0F = new x0F()
