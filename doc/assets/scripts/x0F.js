@@ -18,7 +18,7 @@ export default class x0F
 
     getContext(canvas)
     {
-        context = canvas.getContext("2d")
+        const context = canvas.getContext("2d")
         context.font = "16px Arial"
         return context
     }
