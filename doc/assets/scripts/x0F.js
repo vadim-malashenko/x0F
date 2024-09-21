@@ -7,8 +7,6 @@ export default class x0F
     {
         this.canvas = this.getCanvas(`x0f`)
         this.context = this.getContext(this.canvas)
-
-        this.clear()
     }
 
     getCanvas(id)
