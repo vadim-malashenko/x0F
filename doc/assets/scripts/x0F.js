@@ -29,8 +29,8 @@ export default class x0F
 
         this.context.lineWidth = thickness ?? 1
         this.context.beginPath()
-        this.context.moveTo(x1 + offsetX, y1 + offsetY)
-        this.context.lineTo(x2 + offsetX, y2 + offsetY)
+        this.context.moveTo(x1, y1)
+        this.context.lineTo(x2, y2)
         this.context.stroke()
         this.context.lineWidth = lineWidth
     }
